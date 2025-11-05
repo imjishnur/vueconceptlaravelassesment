@@ -8,6 +8,7 @@ use App\Http\Controllers\Api\EmployeeApiController;
 Route::post('/login', [AuthController::class, 'login']);
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/employees', [EmployeeApiController::class, 'index']);
+     Route::post('/logout', [AuthController::class, 'logout']);
 });
 
 Route::get('/user', function (Request $request) {
