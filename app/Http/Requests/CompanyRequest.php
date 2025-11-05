@@ -23,8 +23,8 @@ class CompanyRequest extends FormRequest
     {
        $rules = [
             'name' => 'required|string|max:255',
-            'email' => 'nullable|email',
-            'website' => 'nullable|url',
+            'email' => 'nullable|email|unique:companies,email,' . $this->company?->id,
+        'website' => 'nullable|url|unique:companies,website,' . $this->company?->id,
             'logo' => 'nullable|image|mimes:jpg,jpeg,png|dimensions:min_width=100,min_height=100'
 
         ];

@@ -25,8 +25,8 @@ class EmployeeRequest extends FormRequest
             'first_name' => 'required|string|max:100',
             'last_name'  => 'required|string|max:100',
             'company_id' => 'nullable|exists:companies,id',
-            'email'      => 'nullable|email|max:255',
-            'phone'      => 'nullable|string|max:20',
+           'email'      => 'nullable|email|max:255|unique:employees,email,' . $this->employee?->id,
+    'phone'      => 'nullable|string|max:20|unique:employees,phone,' . $this->employee?->id,
         ];
     }
 }

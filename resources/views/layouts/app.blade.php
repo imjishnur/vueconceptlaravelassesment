@@ -38,13 +38,13 @@
                             <li class="nav-item">
                                 <a class="nav-link {{ request()->is('companies*') ? 'active fw-bold' : '' }}"
                                    href="{{ route('companies.index') }}">
-                                    🏢 Companies
+                                     Companies
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link {{ request()->is('employees*') ? 'active fw-bold' : '' }}"
                                    href="{{ route('employees.index') }}">
-                                    👨‍💼 Employees
+                                     Employees
                                 </a>
                             </li>
                         </ul>

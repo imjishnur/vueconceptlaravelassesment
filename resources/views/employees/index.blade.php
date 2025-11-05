@@ -49,8 +49,9 @@
         </tbody>
     </table>
 
-    <div class="d-flex justify-content-center">
-        {{ $employees->links() }}
-    </div>
+   <div class="d-flex justify-content-center">
+    {!! $employees->links('pagination::bootstrap-5') !!}
+</div>
+
 </div>
 @endsection
